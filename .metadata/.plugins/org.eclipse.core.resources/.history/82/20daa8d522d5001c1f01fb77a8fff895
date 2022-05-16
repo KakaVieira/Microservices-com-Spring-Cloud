@@ -1,0 +1,25 @@
+package com.desktopdev.microservice.loja.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.desktopdev.microservice.loja.client.FornecedorClient;
+import com.desktopdev.microservice.loja.model.dto.CompraDTO;
+import com.desktopdev.microservice.loja.model.dto.InfoFornecedorDTO;
+
+@Service
+public class CompraService {
+
+	@Autowired
+	private FornecedorClient fornecedorClient;
+	
+    public void realizaCompra(CompraDTO compra) {
+    	
+    	InfoFornecedorDTO info = fornecedorClient.getInfoPorEstado(compra.getEndereco().getEstado());
+    	
+    	fornecedorClient.realizaPedido(compra.getItens());
+      
+
+        System.out.println(info.getEndereco());
+    }
+}

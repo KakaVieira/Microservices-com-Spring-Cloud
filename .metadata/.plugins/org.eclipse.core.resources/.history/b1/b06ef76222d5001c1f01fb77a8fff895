@@ -1,0 +1,5 @@
+package com.desktopdev.microservice.loja.model.dto;
+
+public class InfoPedidoDTO {
+
+}

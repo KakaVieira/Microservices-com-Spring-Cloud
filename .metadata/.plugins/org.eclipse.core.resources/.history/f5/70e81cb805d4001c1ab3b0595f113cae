@@ -1,0 +1,5 @@
+package com.desktopdev.microservice.loja.client;
+
+public class FornecedorClient {
+
+}

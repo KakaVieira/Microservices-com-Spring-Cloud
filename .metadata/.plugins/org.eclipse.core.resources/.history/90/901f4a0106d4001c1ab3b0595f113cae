@@ -1,0 +1,8 @@
+package com.desktopdev.microservice.loja.client;
+
+import org.springframework.cloud.openfeign.FeignClient;
+
+@FeignClient("fornecedor")
+public interface FornecedorClient {
+
+}
